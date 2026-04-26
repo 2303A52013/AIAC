@@ -1,0 +1,6 @@
+flask
+gunicorn
+python-dotenv
+werkzeug
+pdfplumber
+openai
