@@ -60,8 +60,8 @@ Setup
 
 1. Clone the repository
 
-git clone https://github.com/your-username/deepreason.git
-cd deepreason
+git clone https://github.com/2303A52013/AIAC.git
+cd AIAC/Project/"A Context-Aware Multi-Page Reasoning System Using Hierarchical PageIndex Architecture for Efficient Knowledge Retrieval"
 
 2. Create virtual environment
 
@@ -83,7 +83,7 @@ pip install flask python-dotenv openai pdfplumber
 
 Environment Variables
 
-Create a .env file and add:
+Create a .env file:
 
 NVIDIA_API_KEY=your_api_key_here
 
@@ -100,28 +100,25 @@ http://localhost:5000
 
 How to Use
 
-1. Upload a PDF file
-2. Enter your question
+1. Upload a PDF
+2. Enter a question
 3. Click "Analyze Document"
-4. View the answer, reasoning, and relevant sections
+4. View:
+   - Answer
+   - Reasoning
+   - Relevant sections
 
 --------------------------------------------------
 
-CLI Version
+How it works (simple explanation)
 
-You can also run the project in terminal:
+1. PDF is converted into text  
+2. Text is split into logical sections  
+3. Sections are organized into a tree (PageIndex)  
+4. System selects relevant sections based on query  
+5. AI model generates answer from selected content  
 
-python main.py
-
---------------------------------------------------
-
-How it works (simple)
-
-- PDF is converted into text
-- Text is divided into sections
-- Sections are organized into a tree structure
-- Relevant sections are selected based on the query
-- AI model generates the answer from selected content
+Instead of searching everything blindly, the system iteratively selects useful sections and builds the answer step by step, similar to reasoning-based retrieval. :contentReference[oaicite:1]{index=1}
 
 --------------------------------------------------
 
@@ -129,24 +126,25 @@ Limitations
 
 - Works best with text-based PDFs
 - Not suitable for scanned/image PDFs
-- Context selection can be improved
-- Runs locally (not deployed yet)
+- Retrieval logic is basic (can be improved)
+- Runs locally (no deployment yet)
 
 --------------------------------------------------
 
 Future Improvements
 
 - Add semantic search (embeddings)
-- Support multiple documents
-- Improve UI design
-- Deploy the application
-- Optimize performance
+- Support multiple PDFs
+- Improve UI/UX
+- Deploy using cloud services
+- Optimize retrieval speed
+- Better cross-page reasoning
 
 --------------------------------------------------
 
 Author
 
-Thrishank Porandla
+Thrishank Porandla  
 B.Tech CSE (AI & ML)
 
 --------------------------------------------------
